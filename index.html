@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Tash!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(180deg,#090909,#121212,#1b1b1b);
+overflow-x:hidden;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+/* Floating lights */
+
+body::before{
+content:"";
+position:fixed;
+width:250%;
+height:250%;
+background:
+radial-gradient(circle,#ff000055 2px,transparent 3px),
+radial-gradient(circle,#ffd70066 2px,transparent 3px);
+background-size:70px 70px;
+animation:stars 40s linear infinite;
+z-index:-3;
+}
+
+@keyframes stars{
+from{transform:translateY(0);}
+to{transform:translateY(-600px);}
+}
+
+/* Glow */
+
+.glow{
+position:fixed;
+width:450px;
+height:450px;
+background:#ff0000;
+border-radius:50%;
+filter:blur(180px);
+opacity:.18;
+z-index:-2;
+animation:pulse 5s infinite;
+}
+
+@keyframes pulse{
+
+0%{transform:scale(.8);}
+50%{transform:scale(1.2);}
+100%{transform:scale(.8);}
+
+}
+
+/* Card */
+
+.container{
+width:100%;
+max-width:700px;
+text-align:center;
+padding:25px;
+background:rgba(0,0,0,.55);
+border:2px solid #d00000;
+border-radius:25px;
+backdrop-filter:blur(12px);
+box-shadow:0 0 30px rgba(255,0,0,.5);
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.title{
+font-family:Bangers,cursive;
+font-size:60px;
+color:#ffd700;
+letter-spacing:2px;
+text-shadow:0 0 15px red;
+}
+
+.subtitle{
+margin-top:8px;
+font-size:18px;
+color:#ddd;
+}
+
+/* Arc reactor */
+
+.arc{
+margin:35px auto;
+width:170px;
+height:170px;
+border-radius:50%;
+border:7px solid #00d9ff;
+box-shadow:
+0 0 20px #00d9ff,
+0 0 45px #00d9ff,
+0 0 80px #00d9ff;
+display:flex;
+justify-content:center;
+align-items:center;
+animation:spin 10s linear infinite;
+}
+
+.arc::before{
+content:"";
+width:90px;
+height:90px;
+background:#bff7ff;
+border-radius:50%;
+box-shadow:
+0 0 20px cyan,
+0 0 60px cyan;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+.message{
+margin-top:20px;
+line-height:1.9;
+font-size:18px;
+color:#eee;
+}
+
+button{
+
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#d40000;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+font-weight:bold;
+
+}
+
+button:hover{
+
+background:#ff2f2f;
+transform:scale(1.05);
+
+}
+
+.hidden{
+display:none;
+}
+
+.final{
+
+margin-top:35px;
+animation:appear 1s;
+
+}
+
+@keyframes appear{
+
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.final h2{
+
+font-family:Bangers;
+font-size:45px;
+color:#ffd700;
+
+}
+
+.final p{
+margin-top:15px;
+font-size:19px;
+}
+
+.marvel{
+
+margin-top:30px;
+font-size:18px;
+color:#ff4040;
+font-weight:bold;
+
+}
+
+/* Floating balloons */
+
+.balloon{
+position:fixed;
+bottom:-120px;
+font-size:30px;
+animation:float linear infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.title{
+font-size:42px;
+}
+
+.arc{
+width:130px;
+height:130px;
+}
+
+.arc::before{
+width:70px;
+height:70px;
+}
+
+.message{
+font-size:16px;
+}
+
+button{
+width:100%;
+}
+
+.final h2{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="container">
+
+<h1 class="title">HAPPY BIRTHDAY TASH!</h1>
+
+<p class="subtitle">
+Earth's Mightiest Friend ❤️
+</p>
+
+<div class="arc"></div>
+
+<div class="message">
+
+Happy birthday tash!! ❤️<br><br>
+
+I'm so so sorry for forgetting your birthday and I hope this makes up for it.
+
+I know it doesn't excuse the fact that I did forget your birthday and I truly apologise.
+
+Anyways, I hope you know that you are a wonderful person and I look up to you a lot of times.
+
+Thanks for always being there for me and dealing with my BS.
+
+I love you and I hope you have a wonderful year ahead.
+
+Sending you lots of love.
+
+❤️❤️❤️
+
+</div>
+
+<button onclick="showMessage()">
+Assemble!
+</button>
+
+<div class="hidden final" id="final">
+
+<h2>Avengers Assemble! 💥</h2>
+
+<p>
+
+May your year be filled with adventures worthy of the Avengers,
+happiness brighter than Iron Man's Arc Reactor,
+strength like Captain America,
+wisdom like Black Panther,
+and laughter that even Spider-Man would approve of.
+
+<br><br>
+
+Happy Birthday once again!
+
+<br><br>
+
+Love,
+
+<b>— Arru ❤️</b>
+
+</p>
+
+<div class="marvel">
+
+"I love you 3000."
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("final").classList.remove("hidden");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+createConfetti();
+
+}
+
+function createConfetti(){
+
+for(let i=0;i<120;i++){
+
+let conf=document.createElement("div");
+
+conf.innerHTML=["❤️","⭐","✨","🎉","🎈"][Math.floor(Math.random()*5)];
+
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"vw";
+conf.style.top="-30px";
+conf.style.fontSize=(18+Math.random()*18)+"px";
+conf.style.transition="4s linear";
+conf.style.zIndex=9999;
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+
+conf.style.transform="translateY(120vh) rotate(720deg)";
+
+},100);
+
+setTimeout(()=>{
+
+conf.remove();
+
+},4500);
+
+}
+
+}
+
+// Balloons
+
+for(let i=0;i<18;i++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML=["🎈","❤️","⭐"][Math.floor(Math.random()*3)];
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(8+Math.random()*8)+"s";
+
+b.style.animationDelay=(Math.random()*6)+"s";
+
+document.body.appendChild(b);
+
+}
+
+</script>
+
+</body>
+</html>
